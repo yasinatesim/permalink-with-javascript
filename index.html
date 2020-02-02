@@ -98,14 +98,21 @@
   <script type="text/javascript">
     var submitButton = document.querySelector("#submit-button");
 
-    function permalink(str) {
-      str = str.replace(/ı/g, "i");
-      str = str.replace(/İ/g, "i");
-      str = str.replace(/ş/g, "s");
-      str = str.replace(/ü/g, "u");
-      str = str.replace(/ğ/g, "g");
-      str = str.replace(/ç/g, "c");
-      str = str.replace(/ö/g, "o");
+    function permalink(str) {str = str.replace(/ı/g, 'i')
+      str = str.replace(/ş/g, 's')
+      str = str.replace(/ü/g, 'u')
+      str = str.replace(/ğ/g, 'g')
+      str = str.replace(/ç/g, 'c')
+      str = str.replace(/ö/g, 'o')
+
+      str = str.replace(/İ/g, 'i')
+      str = str.replace(/I/g, 'i')
+      str = str.replace(/Ş/g, 's')
+      str = str.replace(/Ü/g, 'u')
+      str = str.replace(/Ğ/g, 'g')
+      str = str.replace(/Ç/g, 'c')
+      str = str.replace(/Ö/g, 'o')
+                             
       str = str.replace(/[^0-9a-zA-Z]/g, "-");
       str = str.replace(/-+/g, "-");
       str = str.replace(/^\-+|\-+$/g, "");
