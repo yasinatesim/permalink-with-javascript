@@ -115,7 +115,10 @@
     var submitButton = document.querySelector("#submit-button");
 
     function permalink(str) {
-      str = getSlug(str)
+      str = getSlug(str, {
+        lang: "tr",
+        uric: true
+      })
       
       return copyTextToClipboard(str);
     }
